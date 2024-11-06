@@ -1,0 +1,150 @@
+.loggin-section {
+  background-image: linear-gradient(0deg, #fff9, #fff),
+    url(/src/assets/bgImg.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &__left {
+    background-image: url("/src/assets/plate.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // padding: 30px 40px;
+    min-height: 600px;
+    position: relative;
+    background-size: 156%;
+
+    .img-container {
+      position: absolute;
+      width: 400px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 420px;
+      animation: 20s spin linear infinite;
+
+      @include xl-12 {
+        width: 380px;
+      }
+
+      @include xxl {
+        width: 420px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .spin-img {
+        // width:250px ;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+
+    @include xl {
+      justify-content: flex-end;
+    }
+
+    .form {
+      background-color: #f1f1f1;
+      border: 1px solid #fcf0f0;
+      padding: 30px 45px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      // @include sm {
+      //   width: 100%;
+      // }
+      // @include md {
+      //   width: 100%;
+      // }
+
+      @include xl {
+        width: 100% !important;
+      }
+
+      @include xl-12 {
+        width: 95% !important;
+      }
+
+      @include xxl {
+        width: 80% !important;
+      }
+
+      .form-img {
+        img {
+          width: 110px;
+          height: 110px;
+        }
+        p {
+          font-size: 32px;
+          margin-top: 10px;
+          text-align: center;
+          font-weight: 700;
+          color: #fff;
+          letter-spacing: 2px;
+          text-shadow: #cc080b 2px 0px 0px, #cc080b 1.75517px 0.958851px 0px,
+            #cc080b 1.0806px 1.68294px 0px, #cc080b 0.141474px 1.99499px 0px,
+            #cc080b -0.832294px 1.81859px 0px, #cc080b -1.60229px 1.19694px 0px,
+            #cc080b -1.97998px 0.28224px 0px, #cc080b -1.87291px -0.701566px 0px,
+            #cc080b -1.30729px -1.5136px 0px, #cc080b -0.421592px -1.95506px 0px,
+            #cc080b 0.567324px -1.91785px 0px, #cc080b 1.41734px -1.41108px 0px,
+            #cc080b 1.92034px -0.558831px 0px;
+        }
+      }
+
+      form {
+        input {
+          border: 1px solid #dad2d2;
+        }
+        button {
+          background-color: rgb(204, 8, 11);
+          color: #fff;
+          border: none;
+
+          &:hover {
+            background-color: #f60a0e;
+          }
+        }
+        svg {
+          right: 10px;
+          top: 13px;
+          cursor: pointer;
+        }
+
+        .requre-tag{
+          color: #cc080b;
+          margin-top: 5px;
+          margin-bottom: 0;
+          font-size: 13px;
+        }
+      }
+
+      .back-link {
+        a {
+          color: #f60a0e;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

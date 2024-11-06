@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+body {
+  font-family: "Josefin Slab", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.loggin-section__left {
+  background-color: red;
+}
+.loggin-section__right {
+  background-color: yellow;
+}

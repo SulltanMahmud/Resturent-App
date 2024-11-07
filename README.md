@@ -22,7 +22,7 @@ The main challenge is to implement the functionalities like table management, em
   
   <caption>Desktop Page </caption>
 
- ![Desktop View](https://github.com/Shahriar-Syeed/kidEdu/blob/main/screenshot/desktop_1.png)
+ ![Desktop View](https://github.com/SulltanMahmud/Resturent-App/blob/main/src/assets/Readme-img/Login-section.png)
  
  
  

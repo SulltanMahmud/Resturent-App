@@ -4,39 +4,41 @@ import { IoFastFoodSharp } from "react-icons/io5";
 import { IoBagHandleSharp } from "react-icons/io5";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { useEffect, useState } from "react";
-import adminImg from '../../../assets/alif.jpg'
+import adminImg from "../../../assets/alif.jpg";
+import { Link, useNavigate } from "react-router-dom";
+import { BsBoxArrowRight } from "react-icons/bs";
 
 const Sidebar = () => {
- 
-  
 
- const [items, setItems] = useState([]);
+  const navigate =useNavigate()
+  const [items, setItems] = useState([]);
+  const { userName, phoneNumber } = items;
 
- useEffect(() => {
-   const items = JSON.parse(localStorage.getItem("user"));
-   if (items) {
-     setItems(items);
-   }
- }, []);
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("user"));
+    if (items) {
+      setItems(items);
+    }
+  }, []);
 
- const {userName, phoneNumber}=items;
-
-
-
- console.log( typeof items,'local Storage data');
+  const logout =()=>{
+     localStorage.removeItem('token')
+     localStorage.removeItem('user')
+     navigate('/login');
+  }
 
   return (
     <div className="sidebar-section d-flex flex-column flex-shrink-0 p-3 ">
       <a
         href="/"
-        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+        className="d-flex align-items-center mb-3 mb-md-0   link-dark text-decoration-none justify-content-between"
       >
         <div className="admin-img">
-          <img src={ adminImg} alt="" className="admin-images" />
+          <img src={adminImg} alt="" className="admin-images" />
         </div>
 
-        <div className="admin-intro">
-          <span>{userName}</span>
+        <div className="admin-intro d-flex flex-column">
+          <span className="">{userName}</span>
           <span>{phoneNumber}</span>
         </div>
       </a>
@@ -89,6 +91,11 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+
+      <button onClick={logout} className="btn logout-btn py-2 rounded-5 fw-bold d-flex justify-content-center gap-2 align-items-center">
+        <BsBoxArrowRight />
+        logout
+      </button>
     </div>
   );
 };

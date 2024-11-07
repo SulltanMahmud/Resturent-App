@@ -1,7 +1,7 @@
 .sidebar-section {
-  background-color: #fdbcbc;
+  background-color: #fff0f0;
 
-  width: 280px;
+  // width: 280px;
   height: 100vh;
 
   .nav {
@@ -12,23 +12,32 @@
       &:hover {
         background-color: #fff;
         color: #fff !important;
-
-        .nav-link {
-        }
       }
     }
   }
 
   .admin-img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    .admin-img {
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .admin-intro {
+    color: #3f2e0c;
+  }
+
+  .logout-btn {
+    border: 1px solid #da282a;
+    color: #da282a;
+
+    &:hover {
+      background-color: #da282a;
+      color: white;
     }
   }
 }

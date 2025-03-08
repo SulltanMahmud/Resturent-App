@@ -36,7 +36,8 @@ The main challenge is to implement the functionalities like table management, em
 4. Secondary Font: Quattrocento, serif;
 
 ## 🔗 Live Site Link
-[![Live](https://img.shields.io/badge/Click_Here_For_Restaurant_APP-000?style=for-the-badge&logo=ko-fi&logoColor=white)]( (https://resturentappalif.netlify.app/))
+[![Live](https://img.shields.io/badge/Click_Here_For_Restaurant_APP-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://resturentappalif.netlify.app/)
+
 
 
 
